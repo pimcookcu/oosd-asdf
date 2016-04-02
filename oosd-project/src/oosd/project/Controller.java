@@ -20,7 +20,10 @@ import javax.swing.border.SoftBevelBorder;
 import javax.swing.GroupLayout;
 import javax.swing.LayoutStyle;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import java.util.HashMap;
 
 import java.awt.Color;
@@ -31,6 +34,7 @@ import java.awt.event.MouseEvent;
 import java.awt.Rectangle;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.EventQueue;
 
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -41,7 +45,7 @@ import java.text.ParseException;
  */
 public class Controller extends JFrame{
     // Snacks menu button
-    private javax.swing.JButton btnFriedFishPasteBalls, btnCharcoalBoiledPorkNeck, btnFriedChicken,
+    private JButton btnFriedFishPasteBalls, btnCharcoalBoiledPorkNeck, btnFriedChicken,
             btnFriedPorkRind, btnCrispyWonton, btnSteamedSpringRoll;
     
     // Foods menu button
@@ -59,25 +63,25 @@ public class Controller extends JFrame{
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Control.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Control.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Control.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+           Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Control.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+        EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Control().setVisible(true);
             }
@@ -106,7 +110,7 @@ public class Controller extends JFrame{
 
         pnlMenuBar.setPreferredSize(new Dimension(800, 70));
 
-        btnReserve.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        btnReserve.setFont(new Font("Tahoma", 0, 18)); // NOI18N
         btnReserve.setText("RESERVE");
         btnReserve.setBorder(new SoftBevelBorder(BevelBorder.RAISED));
         btnReserve.addMouseListener(new MouseAdapter() {
