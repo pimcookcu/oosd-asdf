@@ -232,13 +232,14 @@ public class CheckAvailable extends javax.swing.JFrame {
             MainFrame.setTableIdAndTime(tableId, dateTimeReserve);
             
             DateFormat dateTimeFormat = new SimpleDateFormat("dd-MM-yyyy   HH:mm");
+            dateTimeReserve.add(java.util.Calendar.YEAR, -543);
             String dateString = dateTimeFormat.format(dateTimeReserve.getTime());
             
             MainFrame.setLabelDateAndTime(String.valueOf(tableId), dateString);
             
             dispose();
         } else {
-            javax.swing.JOptionPane.showMessageDialog(null, "Please select table");
+            javax.swing.JOptionPane.showMessageDialog(null, "You did not select the table");
         }
         
     }//GEN-LAST:event_btnDoneMouseClicked
@@ -327,7 +328,7 @@ public class CheckAvailable extends javax.swing.JFrame {
     private int tableId;
     private static Calendar dateTimeReserve;
     
-    private String[] message = {"Available - table No.", "Not Available", "Please reserve at least 1 hour in advance", "08:00 - 20:00"};
+    private String[] message = {"Available - table No.", "Not Available", "Please reserve at least 1 hour in advance", "Bookable in 08:00 - 20:00"};
     private javax.swing.JSpinner spnDate;
     private javax.swing.JSpinner spnTime;
     
