@@ -70,20 +70,20 @@ public class Controller extends JFrame{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-           Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(Control.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Control().setVisible(true);
+                new Controller().setVisible(true);
             }
         });
     }
