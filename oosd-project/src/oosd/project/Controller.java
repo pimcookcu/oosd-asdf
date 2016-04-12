@@ -211,81 +211,26 @@ public class Controller extends JFrame{
     HashMap<String, JButton> snackButtons, foodButtons;
     
     //Snake set
-    private void snakeButton(){   
+        private void snakeButton(){   
         snackButtons = new HashMap<String, JButton>();
         
         snackButtons.put("Fried Fish-Paste Balls", btnFriedFishPasteBalls);
+        setButton(btnFriedFishPasteBalls, "Fried Fish-Paste Balls", 170, 50, 85.0);
+        
         snackButtons.put("Charcoal-Boiled Pork Neck", btnCharcoalBoiledPorkNeck);
+        setButton(btnCharcoalBoiledPorkNeck, "Charcoal-Boiled Pork Neck", 170, 50, 110.0);
+        
         snackButtons.put("Fried Chicken", btnFriedChicken);
-        snackButtons.put("Fried Pork Rind", btnFriedPorkRind);
+        setButton(btnFriedChicken, "Fried Chicken", 170, 50, 60.0);
+        
+        snackButtons.put("Fried Pork Rind", btnFriedPorkRind);    
+        setButton(btnFriedPorkRind, "Fried Pork Rind", 170, 50, 70.0);
+        
         snackButtons.put("Crispy Wonton", btnCrispyWonton);
+        setButton(btnCrispyWonton, "Crispy Wonton", 170, 50, 60.0);
+        
         snackButtons.put("Steamed Spring Roll", btnSteamedSpringRoll);
-    }
-     
-    private void friedFishButton(){    
-        btnFriedFishPasteBalls.setText("Fried Fish-Paste Balls");
-        btnFriedFishPasteBalls.setToolTipText("Fried Fish-Paste Balls");
-        btnFriedFishPasteBalls.setPreferredSize(new Dimension(170, 50));
-        btnFriedFishPasteBalls.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnFriedFishPasteBalls, 85.0);
-            }
-        });
-    }
-    
-    private void charcoalButton(){
-        btnCharcoalBoiledPorkNeck.setText("Charcoal-Boiled Pork Neck");
-        btnCharcoalBoiledPorkNeck.setToolTipText("Charcoal-Boiled Pork Neck");
-        btnCharcoalBoiledPorkNeck.setPreferredSize(new Dimension(170, 50));
-        btnCharcoalBoiledPorkNeck.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnCharcoalBoiledPorkNeck, 110.0);
-            }
-        });
-    }
-    
-    private void firedChickenButton(){
-        btnFriedChicken.setText("Fried Chicken");
-        btnFriedChicken.setToolTipText("Fried Chicken");
-        btnFriedChicken.setPreferredSize(new Dimension(170, 50));
-        btnFriedChicken.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnFriedChicken, 60.0);
-            }
-        });
-    }
-    
-    private void firedPorkButton(){
-        btnFriedPorkRind.setText("Fried Pork Rind");
-        btnFriedPorkRind.setToolTipText("Fried Pork Rind");
-        btnFriedPorkRind.setPreferredSize(new Dimension(170, 50));
-        btnFriedPorkRind.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnFriedPorkRind, 70.0);
-            }
-        });
-    }
-    
-    private void crispyWontonButton(){
-        btnCrispyWonton.setText("Crispy Wonton");
-        btnCrispyWonton.setToolTipText("Crispy Wonton");
-        btnCrispyWonton.setPreferredSize(new Dimension(170, 50));
-        btnCrispyWonton.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnCrispyWonton, 60.0);
-            }
-        });
-    }
-    
-    private void steamedSoringButton(){
-        btnSteamedSpringRoll.setText("Steamed Spring Roll");
-        btnSteamedSpringRoll.setToolTipText("Steamed Spring Roll");
-        btnSteamedSpringRoll.setPreferredSize(new Dimension(170, 50));
-        btnSteamedSpringRoll.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnSteamedSpringRoll, 60.0);
-            }
-        });
+        setButton(btnSteamedSpringRoll, "Steamed Spring Roll", 170, 50, 60.0);
     }
     
     //Food set
@@ -293,135 +238,46 @@ public class Controller extends JFrame{
         foodButtons = new HashMap<String, JButton>();
 
         foodButtons.put("Rice", btnRice);
-        foodButtons.put("Casseroled Prawns", btnCasseroledPrawns);
-        foodButtons.put("Steamed Duck", btnSteamedDuck);
-        foodButtons.put("Fried Fish Topped With Chilli Sauce", btnFriedFishToppedWithChilliSauce);
-        foodButtons.put("Spicy Vermicelli Salad", btnSpicyVermicelliSalad);
-        foodButtons.put("Chicken Green Curry", btnChickenGreenCurry);
-        foodButtons.put("Clear Soup", btnClearSoup);
-        foodButtons.put("Minced Pork Omelet", btnMincedPorkOmelet);
-        foodButtons.put("Fried Crab in Yellow Curry", btnFriedCrabinYellowCurry);
-        foodButtons.put("Deep-Friend Shrimp Cakes", btnDeepFriendShrimpCakes);
-        foodButtons.put("Tom Yum Kung", btnTomYumKung);
-    }
-    
-    private void riceButton(){          
-        btnRice.setText("Rice");
-        btnRice.setToolTipText("Rice");
-        btnRice.setPreferredSize(new Dimension(170, 50));
-        btnRice.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnRice, 30.0);
-            }
-        });
-    }
-    
-    private void casseroledButton(){
-        btnCasseroledPrawns.setText("Casseroled Prawns");
-        btnCasseroledPrawns.setToolTipText("Casseroled Prawns");
-        btnCasseroledPrawns.setPreferredSize(new Dimension(170, 50));
-        btnCasseroledPrawns.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnCasseroledPrawns, 120.0);
-            }
-        });
-    }
-    
-    private void steamedButton(){
-        btnSteamedDuck.setText("Steamed Duck");
-        btnSteamedDuck.setToolTipText("Steamed Duck");
-        btnSteamedDuck.setPreferredSize(new Dimension(170, 50));
-        btnSteamedDuck.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnSteamedDuck, 120.0);
-            }
-        });
-    }
-
-    private void friedFishToppedButton(){ 
-        btnFriedFishToppedWithChilliSauce.setText("Fried Fish Topped With Chilli Sauce");
-        btnFriedFishToppedWithChilliSauce.setToolTipText("Fried Fish Topped With Chilli Sauce");
-        btnFriedFishToppedWithChilliSauce.setPreferredSize(new Dimension(170, 50));
-        btnFriedFishToppedWithChilliSauce.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnFriedFishToppedWithChilliSauce, 220.0);
-            }
-        });
-    }
-    
-    private void spicyVermicellButton(){
-        btnSpicyVermicelliSalad.setText("Spicy Vermicelli Salad");
-        btnSpicyVermicelliSalad.setToolTipText("Spicy Vermicelli Salad");
-        btnSpicyVermicelliSalad.setPreferredSize(new Dimension(170, 50));
-        btnSpicyVermicelliSalad.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnSpicyVermicelliSalad, 120.0);
-            }
-        });
-    }
-
-    private void chickenGreenButton(){
-        btnChickenGreenCurry.setText("Chicken Green Curry");
-        btnChickenGreenCurry.setToolTipText("Chicken Green Curry");
-        btnChickenGreenCurry.setPreferredSize(new Dimension(170, 50));
-        btnChickenGreenCurry.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnChickenGreenCurry, 130.0);
-            }
-        });
-    }
+        setButton(btnRice, "Rice", 170, 50, 30.0);
         
-    private void clearSoupButton(){
-        btnClearSoup.setText("Clear Soup");
-        btnClearSoup.setToolTipText("Clear Soup");
-        btnClearSoup.setPreferredSize(new Dimension(170, 50));
-        btnClearSoup.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnClearSoup, 90.0);
-            }
-        });
+        foodButtons.put("Casseroled Prawns", btnCasseroledPrawns);
+        setButton(btnCasseroledPrawns, "Casseroled Prawns", 170, 50, 120.0);
+        
+        foodButtons.put("Steamed Duck", btnSteamedDuck);
+        setButton(btnSteamedDuck, "Steamed Duck", 170, 50, 120.0);
+        
+        foodButtons.put("Fried Fish Topped With Chilli Sauce", btnFriedFishToppedWithChilliSauce);
+        setButton(btnFriedFishToppedWithChilliSauce, "Fried Fish Topped With Chilli Sauce", 170, 50, 220.0);
+        
+        foodButtons.put("Spicy Vermicelli Salad", btnSpicyVermicelliSalad);
+        setButton(btnSpicyVermicelliSalad, "Spicy Vermicelli Salad", 170, 50, 120.0);
+        
+        foodButtons.put("Chicken Green Curry", btnChickenGreenCurry);
+        setButton(btnChickenGreenCurry, "Chicken Green Curry", 170, 50, 130.0);
+        
+        foodButtons.put("Clear Soup", btnClearSoup);
+        setButton(btnClearSoup, "Clear Soup", 170, 50, 90.0);
+        
+        foodButtons.put("Minced Pork Omelet", btnMincedPorkOmelet);
+        setButton(btnMincedPorkOmelet, "Minced Pork Omelet", 170, 50, 160.0);
+        
+        foodButtons.put("Fried Crab in Yellow Curry", btnFriedCrabinYellowCurry);
+        setButton(btnFriedCrabinYellowCurry, "Fried Crab in Yellow Curry", 170, 50, 190.0);
+        
+        foodButtons.put("Deep-Friend Shrimp Cakes", btnDeepFriendShrimpCakes);
+        setButton(btnDeepFriendShrimpCakes, "Deep-Friend Shrimp Cakes", 170, 50, 180.0);
+        
+        foodButtons.put("Tom Yum Kung", btnTomYumKung);
+        setButton(btnTomYumKung, "Tom Yum Kung", 170, 50, 180.0);
     }
     
-    private void mincedPorkButton(){
-        btnMincedPorkOmelet.setText("Minced Pork Omelet");
-        btnMincedPorkOmelet.setToolTipText("Minced Pork Omelet");
-        btnMincedPorkOmelet.setPreferredSize(new Dimension(170, 50));
-        btnMincedPorkOmelet.addMouseListener(new MouseAdapter() {
+    private void setButton(JButton n, String s, int x, int y, double i){
+        n.setText(s);
+        n.setToolTipText(s);
+        n.setPreferredSize(new Dimension(x, y));
+        n.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnMincedPorkOmelet, 160.0);
-            }
-        });
-    }
-    
-    private void friedCrabinButton(){
-        btnFriedCrabinYellowCurry.setText("Fried Crab in Yellow Curry");
-        btnFriedCrabinYellowCurry.setToolTipText("Fried Crab in Yellow Curry");
-        btnFriedCrabinYellowCurry.setPreferredSize(new Dimension(170, 50));
-        btnFriedCrabinYellowCurry.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnFriedCrabinYellowCurry, 190.0);
-            }
-        });
-    }
-
-    private void deepFriendButton(){
-        btnDeepFriendShrimpCakes.setText("Deep-Friend Shrimp Cakes");
-        btnDeepFriendShrimpCakes.setToolTipText("Deep-Friend Shrimp Cakes");
-        btnDeepFriendShrimpCakes.setPreferredSize(new Dimension(170, 50));
-        btnDeepFriendShrimpCakes.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnDeepFriendShrimpCakes, 180.0);
-            }
-        });
-    }
-
-    private void tomYumKungButton(){  
-        btnTomYumKung.setText("Tom Yum Kung");
-        btnTomYumKung.setToolTipText("Tom Yum Kung");
-        btnTomYumKung.setPreferredSize(new Dimension(170, 50));
-        btnTomYumKung.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblFoodMenuLine(btnTomYumKung, 180.0);
+                addtblFoodMenuLine(n, i);
             }
         });
     }
