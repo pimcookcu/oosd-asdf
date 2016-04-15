@@ -110,27 +110,21 @@ public class Controller extends JFrame{
 
         pnlMenuBar.setPreferredSize(new Dimension(800, 70));
 
-        btnReserve.setFont(new Font("Tahoma", 0, 18)); // NOI18N
-        btnReserve.setText("RESERVE");
-        btnReserve.setBorder(new SoftBevelBorder(BevelBorder.RAISED));
+        setFontText(btnReserve, "Tahoma", 0, 18, "RESERVE");// NOI18N
         btnReserve.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 //btnReserveMouseClicked(evt);
             }
         });
 
-        btnBilling.setFont(new Font("Tahoma", 0, 18)); // NOI18N
-        btnBilling.setText("BILLING");
-        btnBilling.setBorder(new SoftBevelBorder(BevelBorder.RAISED));
+        setFontText(btnBilling, "Tahoma", 0, 18, "BILLING");// NOI18N
         btnBilling.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 //btnBillingMouseClicked(evt);
             }
         });
 
-        btnBacklog.setFont(new Font("Tahoma", 0, 18)); // NOI18N
-        btnBacklog.setText("BACKLOG");
-        btnBacklog.setBorder(new SoftBevelBorder(BevelBorder.RAISED));
+        setFontText(btnBacklog, "Tahoma", 0, 18, "BACKLOG");// NOI18N
         btnBacklog.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent evt) {
                 //btnBacklogMouseClicked(evt);
@@ -208,6 +202,12 @@ public class Controller extends JFrame{
         pack();
     }
     
+    private void setFontText(JButton b, String f, int i, int j, String n){
+        b.setFont(new Font(f, i, j)); // NOI18N
+        b.setText(n);
+        b.setBorder(new SoftBevelBorder(BevelBorder.RAISED));
+    }
+    
     HashMap<String, JButton> snackButtons, foodButtons;
     
     //Snake set
@@ -269,6 +269,13 @@ public class Controller extends JFrame{
         
         foodButtons.put("Tom Yum Kung", btnTomYumKung);
         setButton(btnTomYumKung, "Tom Yum Kung", 170, 50, 180.0);
+        
+        // Beverages 
+        setButtonMenu(btnWater, "Water", 170, 50 ,15.0);
+        setButtonMenu(btnPepsi, "Pepsi", 170, 50 ,25.0);
+        setButtonMenu(btnSprite, "Sprite", 170, 50 ,25.0);
+        setButtonMenu(btnSoda, "Soda", 170, 50 ,25.0);
+        setButtonMenu(btnGreenTea, "GreenTea", 170, 50 ,35.0);
     }
     
     private void setButton(JButton n, String s, int x, int y, double i){
@@ -281,74 +288,6 @@ public class Controller extends JFrame{
             }
         });
     }
-    
-    // Beverages
-    private void waterButton(){
-        btnWater.setText("Water");
-        btnWater.setToolTipText("Water");
-        btnWater.setPreferredSize(new Dimension(170, 50));
-        btnWater.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblBeverageMenuLine(btnWater, 15.0);
-            }
-        });
-    }
-
-    private void pepsiButton(){
-        btnPepsi.setText("Pepsi");
-        btnPepsi.setToolTipText("Pepsi");
-        btnPepsi.setPreferredSize(new Dimension(170, 50));
-        btnPepsi.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblBeverageMenuLine(btnPepsi, 25.0);
-            }
-        });
-    }
-
-    private void spriteButton(){
-        btnSprite.setText("Sprite");
-        btnSprite.setToolTipText("Sprite");
-        btnSprite.setPreferredSize(new Dimension(170, 50));
-        btnSprite.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblBeverageMenuLine(btnSprite, 25.0);
-            }
-        });
-    }
-
-    private void fantaButton(){
-        btnFanta.setText("Fanta");
-        btnFanta.setToolTipText("Fanta");
-        btnFanta.setPreferredSize(new Dimension(170, 50));
-        btnFanta.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblBeverageMenuLine(btnFanta, 25.0);
-            }
-        });
-    }
-
-    private void sodaButton(){
-        btnSoda.setText("Soda");
-        btnSoda.setToolTipText("Soda");
-        btnSoda.setPreferredSize(new Dimension(170, 50));
-        btnSoda.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblBeverageMenuLine(btnSoda, 25.0);
-            }
-        });
-    }
-
-    private void greenTeaButton(){
-        btnGreenTea.setText("Green Tea");
-        btnGreenTea.setToolTipText("Green Tea");
-        btnGreenTea.setPreferredSize(new Dimension(170, 50));
-        btnGreenTea.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent evt) {
-                addtblBeverageMenuLine(btnGreenTea, 35.0);
-            }
-        });
-    }
-    
        
     private void addtblFoodMenuLine(JButton btn, double price) {
         DefaultTableModel model = (DefaultTableModel) tblFoodMenu.getModel();
