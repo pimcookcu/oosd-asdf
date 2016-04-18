@@ -56,7 +56,7 @@ public class Controller extends JFrame{
     // Beverages menu button
     private JButton btnWater, btnPepsi, btnSprite, btnFanta, btnSoda, btnGreenTea;
     
-    public Control() {
+    public Controller() {
         setTitle("Restaurant Queuing");
         //addIcon();
         createMenuButton();
