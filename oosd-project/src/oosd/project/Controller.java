@@ -56,6 +56,17 @@ public class Controller extends JFrame{
     // Beverages menu button
     private JButton btnWater, btnPepsi, btnSprite, btnFanta, btnSoda, btnGreenTea;
     
+    public Control() {
+        setTitle("Restaurant Queuing");
+        //addIcon();
+        createMenuButton();
+        initComponents();
+        //initReserve();
+        //currentTime();
+        setLocationRelativeTo(null);
+        //queue = new Queuing();
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
