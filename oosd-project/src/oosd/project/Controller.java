@@ -287,11 +287,11 @@ public class Controller extends JFrame{
         setButton(btnTomYumKung, "Tom Yum Kung", 170, 50, 180.0);
         
         // Beverages 
-        setButtonMenu(btnWater, "Water", 170, 50 ,15.0);
-        setButtonMenu(btnPepsi, "Pepsi", 170, 50 ,25.0);
-        setButtonMenu(btnSprite, "Sprite", 170, 50 ,25.0);
-        setButtonMenu(btnSoda, "Soda", 170, 50 ,25.0);
-        setButtonMenu(btnGreenTea, "GreenTea", 170, 50 ,35.0);
+        setButton(btnWater, "Water", 170, 50 ,15.0);
+        setButton(btnPepsi, "Pepsi", 170, 50 ,25.0);
+        setButton(btnSprite, "Sprite", 170, 50 ,25.0);
+        setButton(btnSoda, "Soda", 170, 50 ,25.0);
+        setButton(btnGreenTea, "GreenTea", 170, 50 ,35.0);
     }
     
     private void setButton(JButton n, String s, int x, int y, double i){
