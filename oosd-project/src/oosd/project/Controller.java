@@ -244,6 +244,11 @@ public class Controller extends JFrame{
         setButton(btnSteamedSpringRoll, "Steamed Spring Roll", 170, 50, 60.0);
     }
     
+    private void createMenuButton() {
+        snakeButton();
+        foodButton();
+    }
+    
     //Food set
     private void foodButton(){
         foodButtons = new HashMap<String, JButton>();
