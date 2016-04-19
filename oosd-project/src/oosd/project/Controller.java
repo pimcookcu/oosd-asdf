@@ -222,12 +222,12 @@ public class Controller extends JFrame{
     HashMap<String, JButton> snackButtons, foodButtons;
     
     private void createMenuButton() {
-        snakeButton();
+        snackButton();
         foodButton();
     }
     
     //Snake set
-    private void snakeButton(){   
+    private void snackButton(){   
         btnFriedFishPasteBalls = new JButton();
         btnCharcoalBoiledPorkNeck = new JButton();
         btnFriedChicken = new JButton();
