@@ -221,77 +221,103 @@ public class Controller extends JFrame{
     
     HashMap<String, JButton> snackButtons, foodButtons;
     
-    //Snake set
-        private void snakeButton(){   
-        snackButtons = new HashMap<String, JButton>();
-        
-        snackButtons.put("Fried Fish-Paste Balls", btnFriedFishPasteBalls);
-        setButton(btnFriedFishPasteBalls, "Fried Fish-Paste Balls", 170, 50, 85.0);
-        
-        snackButtons.put("Charcoal-Boiled Pork Neck", btnCharcoalBoiledPorkNeck);
-        setButton(btnCharcoalBoiledPorkNeck, "Charcoal-Boiled Pork Neck", 170, 50, 110.0);
-        
-        snackButtons.put("Fried Chicken", btnFriedChicken);
-        setButton(btnFriedChicken, "Fried Chicken", 170, 50, 60.0);
-        
-        snackButtons.put("Fried Pork Rind", btnFriedPorkRind);    
-        setButton(btnFriedPorkRind, "Fried Pork Rind", 170, 50, 70.0);
-        
-        snackButtons.put("Crispy Wonton", btnCrispyWonton);
-        setButton(btnCrispyWonton, "Crispy Wonton", 170, 50, 60.0);
-        
-        snackButtons.put("Steamed Spring Roll", btnSteamedSpringRoll);
-        setButton(btnSteamedSpringRoll, "Steamed Spring Roll", 170, 50, 60.0);
-    }
-    
     private void createMenuButton() {
         snakeButton();
         foodButton();
     }
     
+    //Snake set
+    private void snakeButton(){   
+        btnFriedFishPasteBalls = new JButton();
+        btnCharcoalBoiledPorkNeck = new JButton();
+        btnFriedChicken = new JButton();
+        btnFriedPorkRind = new JButton();
+        btnCrispyWonton = new JButton();
+        btnSteamedSpringRoll = new JButton();
+        
+        snackButtons = new HashMap<String, JButton>();
+        
+        snackButtons.put("Fried Fish-Paste Balls", btnFriedFishPasteBalls);
+        setButtonMenu(btnFriedFishPasteBalls, "Fried Fish-Paste Balls", 170, 50, 85.0);
+        
+        snackButtons.put("Charcoal-Boiled Pork Neck", btnCharcoalBoiledPorkNeck);
+        setButtonMenu(btnCharcoalBoiledPorkNeck, "Charcoal-Boiled Pork Neck", 170, 50, 110.0);
+        
+        snackButtons.put("Fried Chicken", btnFriedChicken);
+        setButtonMenu(btnFriedChicken, "Fried Chicken", 170, 50, 60.0);
+        
+        snackButtons.put("Fried Pork Rind", btnFriedPorkRind);    
+        setButtonMenu(btnFriedPorkRind, "Fried Pork Rind", 170, 50, 70.0);
+        
+        snackButtons.put("Crispy Wonton", btnCrispyWonton);
+        setButtonMenu(btnCrispyWonton, "Crispy Wonton", 170, 50, 60.0);
+        
+        snackButtons.put("Steamed Spring Roll", btnSteamedSpringRoll);
+        setButtonMenu(btnSteamedSpringRoll, "Steamed Spring Roll", 170, 50, 60.0);
+    }
+    
     //Food set
     private void foodButton(){
+        btnRice = new JButton();
+        btnCasseroledPrawns = new JButton();
+        btnSteamedDuck = new JButton();
+        btnFriedFishToppedWithChilliSauce = new JButton();
+        btnSpicyVermicelliSalad = new JButton();
+        btnChickenGreenCurry = new JButton();
+        btnClearSoup = new JButton();
+        btnMincedPorkOmelet = new JButton();
+        btnFriedCrabinYellowCurry = new JButton();
+        btnDeepFriendShrimpCakes = new JButton();
+        btnTomYumKung = new JButton();
+        
+        btnWater = new JButton();
+        btnPepsi = new JButton();
+        btnSprite = new JButton();
+        btnSoda = new JButton();
+        btnGreenTea = new JButton();
+        
+        
         foodButtons = new HashMap<String, JButton>();
 
         foodButtons.put("Rice", btnRice);
-        setButton(btnRice, "Rice", 170, 50, 30.0);
+        setButtonMenu(btnRice, "Rice", 170, 50, 30.0);
         
         foodButtons.put("Casseroled Prawns", btnCasseroledPrawns);
-        setButton(btnCasseroledPrawns, "Casseroled Prawns", 170, 50, 120.0);
+        setButtonMenu(btnCasseroledPrawns, "Casseroled Prawns", 170, 50, 120.0);
         
         foodButtons.put("Steamed Duck", btnSteamedDuck);
-        setButton(btnSteamedDuck, "Steamed Duck", 170, 50, 120.0);
+        setButtonMenu(btnSteamedDuck, "Steamed Duck", 170, 50, 120.0);
         
         foodButtons.put("Fried Fish Topped With Chilli Sauce", btnFriedFishToppedWithChilliSauce);
-        setButton(btnFriedFishToppedWithChilliSauce, "Fried Fish Topped With Chilli Sauce", 170, 50, 220.0);
+        setButtonMenu(btnFriedFishToppedWithChilliSauce, "Fried Fish Topped With Chilli Sauce", 170, 50, 220.0);
         
         foodButtons.put("Spicy Vermicelli Salad", btnSpicyVermicelliSalad);
-        setButton(btnSpicyVermicelliSalad, "Spicy Vermicelli Salad", 170, 50, 120.0);
+        setButtonMenu(btnSpicyVermicelliSalad, "Spicy Vermicelli Salad", 170, 50, 120.0);
         
         foodButtons.put("Chicken Green Curry", btnChickenGreenCurry);
-        setButton(btnChickenGreenCurry, "Chicken Green Curry", 170, 50, 130.0);
+        setButtonMenu(btnChickenGreenCurry, "Chicken Green Curry", 170, 50, 130.0);
         
         foodButtons.put("Clear Soup", btnClearSoup);
-        setButton(btnClearSoup, "Clear Soup", 170, 50, 90.0);
+        setButtonMenu(btnClearSoup, "Clear Soup", 170, 50, 90.0);
         
         foodButtons.put("Minced Pork Omelet", btnMincedPorkOmelet);
-        setButton(btnMincedPorkOmelet, "Minced Pork Omelet", 170, 50, 160.0);
+        setButtonMenu(btnMincedPorkOmelet, "Minced Pork Omelet", 170, 50, 160.0);
         
         foodButtons.put("Fried Crab in Yellow Curry", btnFriedCrabinYellowCurry);
-        setButton(btnFriedCrabinYellowCurry, "Fried Crab in Yellow Curry", 170, 50, 190.0);
+        setButtonMenu(btnFriedCrabinYellowCurry, "Fried Crab in Yellow Curry", 170, 50, 190.0);
         
         foodButtons.put("Deep-Friend Shrimp Cakes", btnDeepFriendShrimpCakes);
-        setButton(btnDeepFriendShrimpCakes, "Deep-Friend Shrimp Cakes", 170, 50, 180.0);
+        setButtonMenu(btnDeepFriendShrimpCakes, "Deep-Friend Shrimp Cakes", 170, 50, 180.0);
         
         foodButtons.put("Tom Yum Kung", btnTomYumKung);
-        setButton(btnTomYumKung, "Tom Yum Kung", 170, 50, 180.0);
+        setButtonMenu(btnTomYumKung, "Tom Yum Kung", 170, 50, 180.0);
         
         // Beverages 
-        setButton(btnWater, "Water", 170, 50 ,15.0);
-        setButton(btnPepsi, "Pepsi", 170, 50 ,25.0);
-        setButton(btnSprite, "Sprite", 170, 50 ,25.0);
-        setButton(btnSoda, "Soda", 170, 50 ,25.0);
-        setButton(btnGreenTea, "GreenTea", 170, 50 ,35.0);
+        setButtonMenu(btnWater, "Water", 170, 50 ,15.0);
+        setButtonMenu(btnPepsi, "Pepsi", 170, 50 ,25.0);
+        setButtonMenu(btnSprite, "Sprite", 170, 50 ,25.0);
+        setButtonMenu(btnSoda, "Soda", 170, 50 ,25.0);
+        setButtonMenu(btnGreenTea, "GreenTea", 170, 50 ,35.0);
     }
     
     private void setButton(JButton n, String s, int x, int y, double i){
