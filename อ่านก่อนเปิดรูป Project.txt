@@ -1,0 +1,84 @@
+ ปล.หมายเหตุ #### คือ class 
+
+
+######Button
+
+void createMenuButton() สร้างปุ่มละใส่ชื่อเข้าไป
+
+void initcomponent()
+ -void initReserve() | 
+ -void initBilling() |>> ยัดปุ่มเข้าไปใน component
+ -void initBacklog() |
+
+-พวกจัด layout ของปุ่ม มั้ง??
+ -void addBevaragesButton()
+ -void addFoodsButton()
+ -void addSnacksButton()
+
+-เวลากดเปลี่ยนหน้า เมนูอ่ะ บิล เบลคลอก
+ -void btnReserveMouseClicked(java.awt.event.MouseEvent evt)
+ -void btnBillingMouseClicked(java.awt.event.MouseEvent evt)
+ -void btnBacklogMouseClicked(java.awt.event.MouseEvent evt)
+
+
+-  ตอนกด double click แล้วลบรายการอาหารอ่ะ
+ -void deleteAllRow(javax.swing.table.DefaultTableModel model)
+ -void delectSelectedRow(javax.swing.JTable tbl, javax.swing.JLabel lbl,   int row)
+
+
+void setOrders(int line, javax.swing.JTable tbl) เซตตารางตรงเวลากดเลือกอาหารป่ะ ??
+ -void addtblFoodMenuLine(javax.swing.JButton btn, double price)
+ -void addtblBeverageMenuLine(javax.swing.JButton btn, double price)
+
+Reset 
+ - void resetToDefault()
+ - void resetBillToDefault()
+
+############# คำนวนนน COMPUTE
+  -void computePrice(javax.swing.JLabel label, double price, String     sign)
+  -int removeComma(String str)
+  -String putComma(double num)
+
+Other ที่ไม่รู้จะเอายัดไว้ในไหน
+ -void checkTable() ปุ่มที่ไว้จองโต๊ะอ่ะ กดแล้วจะมี pop up ให้เลือกเวลา จำนวนคนที่จะจองโต๊ะ ใส่ใน button ป่ะ
+ -void currentTime()
+ -void setLabelDateAndTime(String tableNo, String time)
+ -void setTableIdAndTime(int id, java.util.Calendar time)
+
+
+##########Queuing and how to keep backlog (ต่อดาต้าเบส
+  Backlog
+   - ArrayList<HashMap> getBacklogADay(String date)
+   - ArrayList<HashMap> getBacklogAMonth(String year)
+   - void updateBacklog(String date, double revenue, int chairs)
+
+  Queuing 
+   - Queuing getQueue()
+   - int  checkAvailable(Date date, Date time, int chairs)
+   - void insertOrders(String dateTimeReserve, String timeOut, int            foodId, int quantity, int tableId, int customerId)
+   - void removeOrders(String currentTime, int tableNo)
+   - void updateStatusTable(int tableId)
+
+  Get ข้อมูลมากจากดาต้าเบส ไม่รู้ว่า select ขึ้นมาทำไม ?? น่าจะเอามาใช้กับ backlog
+   - int getCustomerId(String name)
+   - String getCustomerName(int id)
+   - int getFoodId(String foodName)
+   - ArrayList<HashMap> getOrders(Date d)
+   - ArrayList<HashMap> getBilling(int tableId, String customerName)
+
+ other ไม่รู้จะเอาไปใส่อะไร
+   - void disConnectDb()
+
+
+
+###########CheckAvailable ที่กด checktable แล้วมันจะขึ้นมาอ่ะ จริงๆอันนี้เอาไปรวมกัน button เลยก็ได้มั้ง 
+    void btnChairsMouseClicked(int chairs) จำนวนคนอ่ะ ให้เลือกว่ากี่คน
+    - void btnTwoMouseClicked(java.awt.event.MouseEvent evt)
+    - void btnFourMouseClicked(java.awt.event.MouseEvent evt)
+    - void btnTenMouseClicked(java.awt.event.MouseEvent evt)
+    - void btnsixMouseClicked(java.awt.event.MouseEvent evt)
+
+    void btnDoneMouseClicked(java.awt.event.MouseEvent evt) ปุ่ม done
+    void btnCancelMouseClicked(java.awt.event.MouseEvent evt) ปุ่ม cancel
+    void inputDateTime()
+    void setDateTimeReserve(Calendar time) อันนี้ไม่รู็คืออะไร
